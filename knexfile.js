@@ -1,6 +1,6 @@
 module.exports = {
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/beerapp'
+    connection: 'postgres://localhost/beer_tracker'
   }
 };
