@@ -4,17 +4,26 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sign UP</title>
+    <title></title>
+
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
     <div class="page-header">
-      <h1>Sign Up</h1>
+      <h1>Login</h1>
     </div>
     <div class="container">
       <div class="alert alert-danger" role="alert" id="error" style="display:none"></div>
-      <form class="form" action="/auth/signup" method="post">
+      <form action="/auth/login" method="post">
         <div class="form-group">
           <label for="email">Email</label>
           <input type="text" class="form-control" name="email" value="">
@@ -23,7 +32,7 @@
           <label for="email">Password</label>
           <input type="password" class="form-control" name="password" value="">
         </div>
-        <button class="btn btn-primary" type="submit" name="button">Sign Up</button>
+        <button class="btn btn-primary" type="submit" name="button">Log In</button>
       </form>
     </div>
 

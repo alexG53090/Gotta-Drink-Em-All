@@ -1,6 +1,9 @@
+// Update with your config settings.
+
 module.exports = {
+
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/beer_app'
+    connection: 'postgres://localhost/myapp'
   }
 };
