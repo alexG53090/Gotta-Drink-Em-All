@@ -2,6 +2,6 @@
 module.exports = {
   development: {
     client: 'pg',
-    connection: 'postgres://localost/beer'
+    connection: 'postgres://localhost/beer'
   }
 };
