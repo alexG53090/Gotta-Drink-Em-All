@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Logged In</title>
+    <title>Profile</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="js/main.js" charset="utf-8"></script>
@@ -16,11 +16,20 @@
       <h1 id="header">Hello <span id="name"></span></h1>
       <div class="alert alert-danger" role="alert" id="error" style="display:none">You are not allowed to view this page.</div>
     </div>
+    <form>
+      <label>Name</label>
+      <input type='text' name='name'>
+      <label>Type</label>
+      <input type='text' name='type'>
+      <label>Brewery</label>
+      <input type='text' name='rating'>
+      <input type='submit' value'add brew' href="/"/>
     <div class="container">
-      <a class="btn btn-default" id="back" href="/loggedin.html?userID=" style="display:none">Go Back</a>
+      <a class="btn btn-default" id="back" href="/profile.html?userID=" style="display:none">Go Back</a>
       <a class="btn btn-default" href="/auth/logout">Log Out</a>
     </div>
-    <script type="text/javascript">
+    <!-- Cookie managemnt -->
+    <!-- <script type="text/javascript">
       console.log(document.cookie);
       try {
         var id = getParamValue('userID');
@@ -40,6 +49,6 @@
       } catch (e) {
         window.location = '/login.html?error=Not logged in';
       }
-    </script>
+    </script> -->
   </body>
 </html>
