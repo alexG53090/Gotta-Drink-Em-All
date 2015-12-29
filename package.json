@@ -1,0 +1,32 @@
+{
+  "name": "gotta-drink-em-all",
+  "version": "0.0.1",
+  "description": "app that helps you keep track of all the beers you've had by type, brewey, and name",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexG53090/Gotta-Drink-Em-All.git"
+  },
+  "keywords": [
+    "beer",
+    "drink",
+    "app"
+  ],
+  "author": "Alex Bennett <alexandergraybennett@gmail.com> (http://thedope.agency)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexG53090/Gotta-Drink-Em-All/issues"
+  },
+  "homepage": "https://github.com/alexG53090/Gotta-Drink-Em-All#readme",
+  "dependencies": {
+    "bcrypt": "^0.8.5",
+    "body-parser": "^1.14.2",
+    "cookie-parser": "^1.4.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "morgan": "^1.6.1"
+  }
+}
