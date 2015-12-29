@@ -3,7 +3,7 @@
 module.exports = {
 
   development: {
-    client: 'pd',
+    client: 'pg',
     connection: 'postgres://localhost/beerapp'
   }
 
