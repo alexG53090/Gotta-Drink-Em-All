@@ -1,33 +1,27 @@
 var express = require('express');
-var app = express();
-var bodyParser = require('body-parser');
+var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
 var cookieParser = require('cookie-parser');
-var cors = require('cors');
-var bcrypt = require('bcrypt');
-require('dotenv').load();
-var port = 8000;
+var bodyParser = require('body-parser');
 
-var knex = require("knex")({
-  client: "pg",
-  connection: 'postgres://localhost/beer',
-  });
-
-var Beer = function () {
-  return knex('beer');
-}
-
-// put in some routes --> look at CJ's examples
 var auth = require('./routes/auth');
 var users = require('./routes/users');
 
-app.use(express.static('./views'));
-app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false}));
+var app = express();
 
-app.use('/', function(req, res, next){
-  res.redirect('/index.html')
-})
+require('dotenv').load();
+
+// uncomment after placing your favicon in /public
+//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser(process.env.SECRET));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/auth', auth);
+app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -60,6 +54,8 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.listen(port, function(){
-  console.log('Sup, dawg? You are now locked into port: ', port);
+app.listen(1337, function(){
+  console.log('Locked into port: 1337')
 })
+
+module.exports = app;
