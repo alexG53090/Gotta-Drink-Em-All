@@ -16,20 +16,23 @@
       <h1 id="header">Hello <span id="name"></span></h1>
       <div class="alert alert-danger" role="alert" id="error" style="display:none">You are not allowed to view this page.</div>
     </div>
-    <form>
+    <form action="/addbeer" method="post">
       <label>Name</label>
       <input type='text' name='name'>
       <label>Type</label>
       <input type='text' name='type'>
       <label>Brewery</label>
+      <input type='text' name='brewery'>
+      <label>Rating</label>
       <input type='text' name='rating'>
-      <input type='submit' value'add brew' href="/"/>
+      <input type='submit' value'add brew'/>
+    </form>
     <div class="container">
       <a class="btn btn-default" id="back" href="/profile.html?userID=" style="display:none">Go Back</a>
       <a class="btn btn-default" href="/auth/logout">Log Out</a>
     </div>
     <!-- Cookie managemnt -->
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
       console.log(document.cookie);
       try {
         var id = getParamValue('userID');
@@ -49,6 +52,6 @@
       } catch (e) {
         window.location = '/login.html?error=Not logged in';
       }
-    </script> -->
+    </script>
   </body>
 </html>

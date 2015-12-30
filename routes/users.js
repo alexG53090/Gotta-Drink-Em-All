@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var knex = require('../db/knex');
-
 var Users = function () {
   return knex('users');
 }
@@ -28,7 +27,7 @@ router.get('/:id', function(req, res){
         res.json(user);
       } else {
         res.status(404);
-        res.json({ message: 'not found' });
+        res.json({ message: 'not found fuck you!' });
       }
     }).catch(function(error){
       res.status(404);

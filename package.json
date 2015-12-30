@@ -1,6 +1,6 @@
 {
-  "name": "authDemo",
-  "version": "0.0.0",
+  "name": "beer",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www"
@@ -17,5 +17,18 @@
     "nodemon": "^1.8.1",
     "pg": "^4.4.3",
     "serve-favicon": "~2.3.0"
-  }
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexG53090/Gotta-Drink-Em-All.git"
+  },
+  "author": "Alex Bennett <alexandergraybennett@gmail.com> (http://thedope.agency)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexG53090/Gotta-Drink-Em-All/issues"
+  },
+  "homepage": "https://github.com/alexG53090/Gotta-Drink-Em-All#readme",
+  "description": ""
 }
